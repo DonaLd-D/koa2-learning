@@ -1,5 +1,9 @@
+const bodyParser = require('koa-bodyparser');
+
 const Koa  = require('koa');
 const app = new Koa();
+
+app.use(bodyParser());
 app.use(async(ctx)=>{
     if(ctx.url==='/' && ctx.method==='GET'){
         //显示表单页面
